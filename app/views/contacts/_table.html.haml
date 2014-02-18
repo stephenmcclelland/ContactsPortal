@@ -1,0 +1,24 @@
+%table.table.table-hover.table-condensed
+	%thead
+		%tr
+			%th.span1= "Title"
+			%th.span2= "Name"
+			%th.span1= "Company"
+			%th.span2= "Email"
+			%th.span1= "Mobile"
+			%th.span1= "Telephone"
+	%tbody
+		- @contacts.each do |contact|
+			%tr
+			%td.span1.link= contact.title
+			%td.span2.link= contact.full_name
+			%td.span1.link= contact.company
+			%td.span2.link= contact.email
+			%td.span1.link= contact.mobile
+			%td.span1.link= contact.telephone
+			%td= link_to 'Show', contact
+			%td
+				= link_to contact, method: :delete, :title => "Delete Contact" do
+					%span.glyphicon.glyphicon-remove-circle
+= will_paginate @contacts
+= link_to 'New Contact', new_contact_path

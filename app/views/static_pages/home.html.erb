@@ -1,0 +1,14 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'contacts/index' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to the Contacts Portal</h1>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
