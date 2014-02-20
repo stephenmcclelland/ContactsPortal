@@ -1,20 +1,17 @@
 %p#notice= notice
 
 %p
+  %b Title:
+  = @contact.title
+%p
   %b First name:
   = @contact.first_name
 %p
   %b Last name:
   = @contact.last_name
 %p
-  %b Title:
-  = @contact.title
-%p
   %b Company:
   = @contact.company
-%p
-  %b Email:
-  = @contact.email
 %p
   %b Address line1:
   = @contact.address_line1
@@ -39,6 +36,9 @@
 %p
   %b Meeting notes:
   = @contact.meeting_notes
+%p
+  %b Email:
+  = @contact.email
 %p
   %b Mobile:
   = @contact.mobile
